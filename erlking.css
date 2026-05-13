@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Space+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Tilt+Neon&display=swap");
+
+:root {
+  --neon-purple: #b300ff;
+  --neon-pink: #ff10f0;
+  --neon-blue: #00ccff;
+  --glass-bg: rgba(10, 2, 20, 0.85);
+  --glass-bg-70: rgba(10, 2, 20, 0.7);
+}
+
+a {
+  color: var(--neon-blue);
+}
+
+a:hover,
+a:active {
+  color: var(--neon-pink);
+}
+
+.erlkingbox {
+  display: inline-flex;
+  flex-direction: row;
+  gap: 8px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .erlkingbox {
+    flex-wrap: wrap;
+  }
+}
+
+.erlkingwrap {
+  flex-wrap: wrap;
+}
+
+.erlkingchar {
+  width: 200px;
+  background: var(--glass-bg);
+  display: inline-flex;
+  flex-direction: column;
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 2px solid var(--neon-blue);
+  text-align: center;
+  filter: grayscale(25%);
+  color: var(--almost-white-color) !important;
+}
+
+.erlkingchar:hover {
+  border: 2px solid var(--neon-pink);
+  filter: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .erlkingchar {
+    width: 100%;
+    filter: none;
+  }
+}
+
+.erlkingchar em {
+  opacity: 80%;
+}
+
+.erlkingchar img {
+  border-radius: 10px;
+}
+
+.erlkingchar:hover {
+  opacity: 100%;
+  transition: opacity 0.3s;
+}
+
+.erlkingchar * {
+  width: 100%
+}
+
+.erlkingbanner {
+  width: 100%;
+  opacity: 75%;
+}
+
+.erlkingbanner:hover {
+  opacity: 100%
+}
+
+.erlkingvote {
+  border-radius: 5px;
+  border: 2px solid var(--neon-pink);
+  background-color: var(--glass-bg);
+  font-size: 2rem;
+  text-align: center;
+  padding: 0.5em;
+  margin: 1rem auto;
+}
+
+.erlkinwarning,
+.erlkingwarning {
+  border-radius: 5px;
+  border: 2px solid #FFB256;
+  background-color: var(--glass-bg);
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.5em;
+  margin: 1rem auto;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('https://iili.io/KedSvn9.png');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  opacity: 0.2;
+  pointer-events: none;
+  filter: grayscale(66%) blur(3px);
+}
+
+.erlkingty {
+  height: 50vh;
+}
+
+/** Header **/
+
+.ant-layout-header,
+header.ant-layout-header {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(10px) !important;
+  border-bottom: 2px solid var(--neon-purple) !important;
+  box-shadow:
+    0 0 20px var(--neon-purple),
+    inset 0 0 10px rgba(179, 0, 255, 0.2) !important;
+  z-index: 1100 !important;
+}
+
+.ant-menu-root,
+.ant-menu-item {
+  background: transparent !important;
+}
+
+.ant-menu-item a,
+.ant-menu-submenu-title {
+  font-family: "Orbitron", sans-serif !important;
+  color: var(--neon-blue) !important;
+  text-shadow: 0 0 8px var(--neon-blue) !important;
+  transition: all 0.3s !important;
+}
+
+.ant-menu-item:hover a,
+.ant-menu-submenu-title:hover {
+  color: var(--neon-pink) !important;
+  text-shadow: 0 0 15px var(--neon-pink) !important;
+}
+
+.ant-layout-header .ant-menu-horizontal>.ant-menu-item::after {
+  display: none !important;
+}
+
+.ant-layout-header .ant-menu-horizontal>.ant-menu-item::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 10% !important;
+  right: 10% !important;
+  bottom: 6px !important;
+  height: 2px !important;
+  background: linear-gradient(90deg,
+      transparent,
+      var(--neon-pink),
+      transparent) !important;
+  transform: scaleX(0) !important;
+  transition: transform 0.3s !important;
+  box-shadow: 0 0 10px var(--neon-pink) !important;
+}
+
+.ant-layout-header .ant-menu-horizontal>.ant-menu-item:hover::before {
+  transform: scaleX(1) !important;
+}
+
+/** Items **/
+
+.ant-ribbon-wrapper>.ant-image>.ant-image-img {
+  border-radius: 16px;
+  border: 1px solid var(--neon-pink);
+}
+
+.ant-tag {
+  background: var(--glass-bg) !important;
+  border: 1px solid var(--neon-purple) !important;
+  color: var(--neon-blue) !important;
+  font-family: "Space Mono", monospace !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  border-radius: 20px !important;
+  padding: 4px 12px !important;
+}
+
+.ant-tag:hover {
+  border-color: var(--neon-pink) !important;
+  box-shadow: 0 0 20px var(--neon-pink) !important;
+  transform: translateY(-2px) !important;
+}
+
+.ant-tag.ant-tag-error {
+  color: transparent !important;
+  background-image: url("https://file.garden/adAUzc6N_zBZzLLI/blue-fire-burning.gif") !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-color: transparent !important;
+  width: 30px !important;
+  height: 30px !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  transform: translateY(-10px) !important;
+}
+
+.anticon-heart::before {
+  content: "♡" !important;
+  font-size: 20px !important;
+  color: var(--neon-purple) !important;
+  text-shadow: 0 0 15px var(--neon-purple) !important;
+}
+
+.ant-btn-variant-outlined {
+  border-color: var(--neon-purple) !important;
+  background: rgba(179, 0, 255, 0.15) !important;
+  color: var(--neon-purple) !important;
+  font-family: "Orbitron", sans-serif !important;
+  border-radius: 30px !important;
+  font-size: 12px !important;
+}
+
+.ant-btn-variant-outlined:hover {
+  border-color: var(--neon-pink) !important;
+  background: var(--neon-pink) !important;
+  box-shadow: 0 0 25px var(--neon-pink) !important;
+  color: white !important;
+}
+
+.ant-btn-color-primary {
+  background: var(--neon-purple);
+  font-family: "Orbitron", sans-serif !important;
+  font-size: 14px !important;
+}
+
+.ant-btn-color-primary:hover {
+  background-color: var(--neon-pink) !important;
+  box-shadow: 0 0 25px var(--neon-pink) !important;
+}
+
+.space-x-2>.ant-btn-variant-outlined {
+  width: 100% !important;
+}
+
+.ant-card-bordered,
+.ant-card,
+.char-card-class {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(8px) !important;
+  border: 2px solid var(--neon-purple) !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+}
+
+.ant-card-bordered:hover,
+.ant-card:hover,
+.char-card-class:hover {
+  border-color: var(--neon-pink) !important;
+}
+
+.ant-switch-checked {
+  background-color: var(--neon-purple) !important;
+}
+
+.ant-collapse {
+  background-color: var(--glass-bg) !important;
+}
